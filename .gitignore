@@ -12,8 +12,10 @@
 *.idea/*
 *UserSettings/*
 /.utmp/
-
 *mono_crash.*.json
+RuntimeActionBindings.json
+
+Assets/External/PianoRoom/*
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
