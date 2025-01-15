@@ -1,17 +1,21 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class MyPianoKeyController : MonoBehaviour
 {
-    [SerializeField] private AudioClip _sound;
-    
+    [SerializeField] private MyPianoController _pianoController;
+
+    private AudioClip _sound;
     private Animator _animator;
     private float _keyPressCooldownTime = 0.025f;
     private bool _canInteract = true;
 
-    private void Start()
+    private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _sound = _pianoController.keySounds.FirstOrDefault(clip => clip.name == gameObject.name);
     }
 
     private void OnTriggerEnter(Collider other)
