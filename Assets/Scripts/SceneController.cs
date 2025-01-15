@@ -8,7 +8,7 @@ public class SceneController : MonoBehaviour
 {
     [SerializeField] private TestHandCollider _handCollider;
     [SerializeField] private GameObject _pianoPrefab;
-    [SerializeField] private FindSpawnPositions _findSpawnPositions;
+    // [SerializeField] private FindSpawnPositions _findSpawnPositions;
 
     
     private GameObject _roomGameObject;
