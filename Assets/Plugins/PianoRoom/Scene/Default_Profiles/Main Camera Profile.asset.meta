@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0ae1b808cba1856449b8b9ecabde1782
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Scene/Default_Profiles/Main Camera Profile.asset
+  uploadId: 639554

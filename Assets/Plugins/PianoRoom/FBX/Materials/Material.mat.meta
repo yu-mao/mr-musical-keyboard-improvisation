@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 22fa8681485333845bba923b511d82ff
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/FBX/Materials/Material.mat
+  uploadId: 639554

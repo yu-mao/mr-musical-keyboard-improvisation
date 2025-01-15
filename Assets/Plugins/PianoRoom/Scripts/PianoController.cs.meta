@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 99a2da1d1271c27459824edbdf12200d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Scripts/PianoController.cs
+  uploadId: 639554

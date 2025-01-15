@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e1959864110c52f4b960459dbbde6f8a
+timeCreated: 1467461450
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Materials/DetailsBaked.mat
+  uploadId: 639554

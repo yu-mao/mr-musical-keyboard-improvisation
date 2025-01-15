@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7f2e27a4b525d2e46902dfa515b91165
+timeCreated: 1463914350
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Materials/PianoNoteReaderFrame.mat
+  uploadId: 639554

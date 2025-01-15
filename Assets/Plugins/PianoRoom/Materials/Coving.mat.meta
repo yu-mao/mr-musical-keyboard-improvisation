@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e4186c3185b3188429a463f636e9b9ed
+timeCreated: 1467486303
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Materials/Coving.mat
+  uploadId: 639554
