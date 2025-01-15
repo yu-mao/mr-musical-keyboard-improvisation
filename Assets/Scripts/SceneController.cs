@@ -6,19 +6,23 @@ using UnityEngine;
 public class SceneController : MonoBehaviour
 {
     [SerializeField] private FindSpawnPositions _findSpawnPositions;
-    
+
+    private GameObject _roomGameObject;
     private MyPianoController _pianoController;
+    
 
     public void Initialize()
     {
+        _roomGameObject = FindAnyObjectByType<MRUKRoom>().gameObject;
+        // Debug.Log("MRUK Room: " + _roomGameObject.name);
         
+        SpawnPiano();
+    }
+    
+    private void SpawnPiano()
+    {
         _findSpawnPositions.StartSpawn();
         _pianoController = _findSpawnPositions.GetComponentInChildren<MyPianoController>();
-        Debug.Log("Found piano: " + _pianoController);
-        
-        var _room = MRUK.Instance.GetCurrentRoom();
-
-        MRUKAnchor anchor = new MRUKAnchor();
-        anchor.
+        // Debug.Log("Found piano: " + _pianoController);
     }
 }
