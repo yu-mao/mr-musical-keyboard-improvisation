@@ -12,11 +12,10 @@ public class MyPianoKey
 
 public class MyPianoController : MonoBehaviour
 {
-    private List<MyPianoKey> _pianoKeys = new List<MyPianoKey>();
-    private bool _canPressKey = true;
-    private float _keyPressCooldownTime = 0.025f;
+    public List<AudioClip> keySounds;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private List<MyPianoKey> _pianoKeys = new List<MyPianoKey>();
+    
     private void Start()
     {
         var allKeys = GameObject.FindGameObjectsWithTag("PianoKey");
@@ -30,11 +29,5 @@ public class MyPianoController : MonoBehaviour
             });
         }
     }
-
-    private void Update()
-    {
-        // if (_canPressKey)
-    }
-
 
 }
