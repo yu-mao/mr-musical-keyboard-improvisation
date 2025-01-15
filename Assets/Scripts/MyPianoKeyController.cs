@@ -9,7 +9,7 @@ public class MyPianoKeyController : MonoBehaviour
 
     private AudioClip _sound;
     private Animator _animator;
-    private float _keyPressCooldownTime = 0.025f;
+    private float _keyPressCooldownTime = 0.02f;
     private bool _canInteract = true;
 
     private void Awake()
@@ -26,7 +26,6 @@ public class MyPianoKeyController : MonoBehaviour
             PlaySound();
             StartCoroutine(KeyCooldown());
         }
-        
     }
     
     private void OnTriggerExit(Collider other)
