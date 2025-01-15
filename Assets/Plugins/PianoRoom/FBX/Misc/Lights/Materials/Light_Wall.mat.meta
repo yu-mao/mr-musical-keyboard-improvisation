@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eba1ddae73374934b82b86869a7e1002
+timeCreated: 1468181421
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/FBX/Misc/Lights/Materials/Light_Wall.mat
+  uploadId: 639554

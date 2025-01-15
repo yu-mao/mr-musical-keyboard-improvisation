@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a4d0d423187cf6145b6fc976f0a1fa81
+timeCreated: 1468827875
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Materials/Gold_Ani.mat
+  uploadId: 639554

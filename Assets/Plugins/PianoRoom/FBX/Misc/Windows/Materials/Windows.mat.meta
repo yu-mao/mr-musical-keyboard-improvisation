@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1ba9d082523999b4d8c7b30f0a1f4921
+timeCreated: 1466448134
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/FBX/Misc/Windows/Materials/Windows.mat
+  uploadId: 639554

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 40d4156ae39658144943ce958e68e7ff
+timeCreated: 1469444614
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Materials/Leaf.mat
+  uploadId: 639554

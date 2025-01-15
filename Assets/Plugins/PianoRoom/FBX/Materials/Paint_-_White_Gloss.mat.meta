@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 62f38c98f8e4f6744af9d2c2858bef5c
+timeCreated: 1483366628
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/FBX/Materials/Paint_-_White_Gloss.mat
+  uploadId: 639554

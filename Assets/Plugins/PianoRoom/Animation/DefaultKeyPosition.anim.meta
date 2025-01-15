@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 45d9626227019b5418a09cf23c34abe0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Animation/DefaultKeyPosition.anim
+  uploadId: 639554

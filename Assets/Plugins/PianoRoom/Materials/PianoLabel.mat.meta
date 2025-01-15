@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a28e2d8559137dc44bc96a5e1949d377
+timeCreated: 1464122040
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Materials/PianoLabel.mat
+  uploadId: 639554

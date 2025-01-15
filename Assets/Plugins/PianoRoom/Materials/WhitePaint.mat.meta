@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a29dfc011e5549644989750e6cc6674f
+timeCreated: 1469386230
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Materials/WhitePaint.mat
+  uploadId: 639554

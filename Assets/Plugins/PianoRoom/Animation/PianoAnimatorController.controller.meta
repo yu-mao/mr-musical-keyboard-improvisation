@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 69d1c860c655764429049aba69d667cb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67666
+  packageName: Piano Room PBR
+  packageVersion: 1.1
+  assetPath: Assets/PianoRoom/Animation/PianoAnimatorController.controller
+  uploadId: 639554
