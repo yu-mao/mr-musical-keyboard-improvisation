@@ -8299,6 +8299,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _handCollider: {fileID: 1308419204}
   _pianoPrefab: {fileID: 3980617535266053094, guid: f6d60c488ef1c4303bbff82b4f81daf6, type: 3}
+  _findSpawnPositions: {fileID: 197144765}
+  _musicEffectChinese: {fileID: 3982725609486518340, guid: fd2dc6cbd9e82483085d2fdd086e410f, type: 3}
+  _musicEffectJapanese: {fileID: 3695330194001837707, guid: 5de358fce0a454c47b60bd32a5e338e8, type: 3}
 --- !u!4 &1356869822
 Transform:
   m_ObjectHideFlags: 0
