@@ -59,6 +59,8 @@ public class SceneController : MonoBehaviour
         Quaternion projectedRotation = Quaternion.Euler(eulerAngles);
 
         var piano = Instantiate(_pianoPrefab, position, projectedRotation);
+        var pianoController = piano.GetComponent<MyPianoController>();
+        pianoController.InitializeScale(PianoScale.Chinese);
         _spawnedPianos.Add(piano);
     }
 }
