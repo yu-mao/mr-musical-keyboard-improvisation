@@ -3,31 +3,54 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class MyPianoKey
-{
-    public GameObject key { get; set; }
-    public Transform originalKeyPosition { get; set; }
-    public bool isPressed { get; set; }
+public enum PianoScale {
+    Default = 0,
+    Chinese = 1,
+    Japanese = 2
 }
 
 public class MyPianoController : MonoBehaviour
 {
     public List<AudioClip> keySounds;
-    
-    private List<MyPianoKey> _pianoKeys = new List<MyPianoKey>();
-    
-    private void Start()
+
+    [SerializeField] private GameObject defaultPiano;
+    [SerializeField] private GameObject chinesePiano;
+    [SerializeField] private GameObject japanesePiano;
+
+    public void Refresh(PianoScale scale)
     {
-        var allKeys = GameObject.FindGameObjectsWithTag("PianoKey");
-        for (int i = 0; i < allKeys.Length; i++)
-        {
-            _pianoKeys.Add(new MyPianoKey
-            {
-                originalKeyPosition = allKeys[i].transform,  
-                key = allKeys[i], 
-                isPressed = false
-            });
-        }
+        StartCoroutine(actualRefresh(scale));
     }
 
+    private IEnumerator actualRefresh(PianoScale scale)
+    {
+        MuteAllScales();
+        yield return new WaitForSeconds(0.2f);
+        SetupNewScale(scale);
+    }
+    
+    private void MuteAllScales()
+    {
+        defaultPiano.SetActive(false);
+        chinesePiano.SetActive(false);
+        japanesePiano.SetActive(false);
+    }
+    
+    private void SetupNewScale(PianoScale scale)
+    {
+        switch (scale)
+        {
+            case PianoScale.Default:
+                defaultPiano.SetActive(true);
+                break;
+            case PianoScale.Chinese:
+                chinesePiano.SetActive(true);
+                break;
+            case PianoScale.Japanese:
+                japanesePiano.SetActive(true);
+                break;
+            default:
+                break;
+        }
+    }
 }
