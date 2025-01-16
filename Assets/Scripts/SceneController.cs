@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Meta.XR.MRUtilityKit;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SceneController : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class SceneController : MonoBehaviour
     
     private GameObject _roomGameObject;
     private bool _canSpawnPiano = false;
-    private Vector3 _collisionPosition;
     private List<GameObject> _spawnedPianos = new List<GameObject>();
+    private PianoScale _currentScale = PianoScale.Japanese;
     
     public void Initialize()
     {
@@ -42,6 +43,14 @@ public class SceneController : MonoBehaviour
         }
     }
 
+    public void SwitchScale()
+    { 
+        Array scales = Enum.GetValues(typeof(PianoScale));
+        int currentIndex = Array.IndexOf(scales, _currentScale);
+        int nextIndex = (currentIndex + 1) % scales.Length; // Compute the next index (wrap around if necessary)
+        _currentScale = (PianoScale)nextIndex; // cast the index to a specific scale in PianoScale enum
+    }
+    
     private void Update()
     {
         if (_canSpawnPiano && _handCollider.hasCollided)
@@ -60,14 +69,9 @@ public class SceneController : MonoBehaviour
         Quaternion projectedRotation = Quaternion.Euler(eulerAngles);
 
         var piano = Instantiate(_pianoPrefab, position, projectedRotation);
-        StartCoroutine(InitializePiano(piano));
-    }
-
-    private IEnumerator InitializePiano(GameObject piano)
-    {
-        yield return new WaitForSeconds(0.2f);
-        var pianoController = piano.GetComponent<MyPianoController>();
-        pianoController.InitializeScale(PianoScale.Japanese);
         _spawnedPianos.Add(piano);
+        
+        var pianoController = piano.GetComponent<MyPianoController>();
+        pianoController.RefreshPiano(_currentScale);
     }
 }

@@ -17,7 +17,26 @@ public class MyPianoController : MonoBehaviour
     [SerializeField] private GameObject chinesePiano;
     [SerializeField] private GameObject japanesePiano;
 
-    public void InitializeScale(PianoScale scale)
+    public void RefreshPiano(PianoScale scale)
+    {
+        StartCoroutine(actualRefresh(scale));
+    }
+
+    private IEnumerator actualRefresh(PianoScale scale)
+    {
+        MuteAllScales();
+        yield return new WaitForSeconds(0.2f);
+        SetupNewScale(scale);
+    }
+    
+    private void MuteAllScales()
+    {
+        defaultPiano.SetActive(false);
+        chinesePiano.SetActive(false);
+        japanesePiano.SetActive(false);
+    }
+    
+    private void SetupNewScale(PianoScale scale)
     {
         switch (scale)
         {
@@ -35,10 +54,10 @@ public class MyPianoController : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        defaultPiano.SetActive(false);
-        chinesePiano.SetActive(false);
-        japanesePiano.SetActive(false);
-    }
+    // private void Start()
+    // {
+    //     defaultPiano.SetActive(false);
+    //     chinesePiano.SetActive(false);
+    //     japanesePiano.SetActive(false);
+    // }
 }
