@@ -9,7 +9,7 @@ public class MyPianoKeyController : MonoBehaviour
 
     private AudioClip _sound;
     private Animator _animator;
-    private float _keyPressCooldownTime = 0.02f;
+    private float _keyPressCooldownTime = 0.01f;
     private bool _canInteract = true;
 
     private void Awake()
