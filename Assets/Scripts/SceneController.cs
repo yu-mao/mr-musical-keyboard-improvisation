@@ -20,6 +20,7 @@ public class SceneController : MonoBehaviour
         _roomGameObject = FindAnyObjectByType<MRUKRoom>().gameObject;
         ApplyLayer(_roomGameObject, "Room");
         // _findSpawnPositions.StartSpawn();
+        // SpawnPiano(transform.position); // for testing in Unity editor
     }
     
     private void ApplyLayer(GameObject obj, string layerName)
@@ -52,15 +53,21 @@ public class SceneController : MonoBehaviour
     
     private void SpawnPiano(Vector3 position)
     {
-        // align piano placement direction with hand orientation on XZ plane
+        // align piano placement direction with hand orientation and project to XZ plane
         Vector3 eulerAngles = _handCollider.transform.rotation.eulerAngles;
         eulerAngles.x = 0;
         eulerAngles.z = 0;
         Quaternion projectedRotation = Quaternion.Euler(eulerAngles);
 
         var piano = Instantiate(_pianoPrefab, position, projectedRotation);
+        StartCoroutine(InitializePiano(piano));
+    }
+
+    private IEnumerator InitializePiano(GameObject piano)
+    {
+        yield return new WaitForSeconds(0.2f);
         var pianoController = piano.GetComponent<MyPianoController>();
-        pianoController.InitializeScale(PianoScale.Chinese);
+        pianoController.InitializeScale(PianoScale.Japanese);
         _spawnedPianos.Add(piano);
     }
 }
