@@ -9,28 +9,36 @@ public class SceneController : MonoBehaviour
     [SerializeField] private TestHandCollider _handCollider;
     [SerializeField] private GameObject _pianoPrefab;
     // [SerializeField] private FindSpawnPositions _findSpawnPositions;
-
     
     private GameObject _roomGameObject;
-    private MyPianoController _pianoController;
-    private bool _canSpawnPiano = true;
+    private bool _canSpawnPiano = false;
     private Vector3 _collisionPosition;
-
+    private List<GameObject> _spawnedPianos = new List<GameObject>();
+    
     public void Initialize()
     {
         _roomGameObject = FindAnyObjectByType<MRUKRoom>().gameObject;
         ApplyLayer(_roomGameObject, "Room");
+        // _findSpawnPositions.StartSpawn();
     }
-
-    private void SpawnPiano(Vector3 position)
+    
+    private void ApplyLayer(GameObject obj, string layerName)
     {
-        // align piano placement direction with hand orientation on Y axis
-        Vector3 eulerAngles = _handCollider.transform.rotation.eulerAngles;
-        eulerAngles.x = 0;
-        eulerAngles.z = 0;
-        Quaternion projectedRotation = Quaternion.Euler(eulerAngles);
+        int layer = LayerMask.NameToLayer(layerName);
+        obj.layer = layer;
         
-        GameObject piano = Instantiate(_pianoPrefab, position, projectedRotation);
+        foreach(Transform child in obj.transform) ApplyLayer(child.gameObject, layerName);
+    }
+    
+    public void RecreateKeyboard()
+    {
+        if (!_canSpawnPiano) _canSpawnPiano = true;
+
+        if (_spawnedPianos.Count >= 1)
+        {
+            Destroy(_spawnedPianos[_spawnedPianos.Count - 1]);
+            _spawnedPianos.RemoveAt(_spawnedPianos.Count - 1);
+        }
     }
 
     private void Update()
@@ -38,22 +46,19 @@ public class SceneController : MonoBehaviour
         if (_canSpawnPiano && _handCollider.hasCollided)
         {
             SpawnPiano(_handCollider.collisionPosition);
-            StartCoroutine(SpawnCooldown());
+            _canSpawnPiano = false;
         }
     }
-
-    private IEnumerator SpawnCooldown()
+    
+    private void SpawnPiano(Vector3 position)
     {
-        _canSpawnPiano = false;
-        yield return new WaitForSeconds(0.5f);
-        _canSpawnPiano = true;
-    }
+        // align piano placement direction with hand orientation on XZ plane
+        Vector3 eulerAngles = _handCollider.transform.rotation.eulerAngles;
+        eulerAngles.x = 0;
+        eulerAngles.z = 0;
+        Quaternion projectedRotation = Quaternion.Euler(eulerAngles);
 
-    private void ApplyLayer(GameObject obj, string layerName)
-    {
-        int layer = LayerMask.NameToLayer(layerName);
-        obj.layer = layer;
-        
-        foreach(Transform child in obj.transform) ApplyLayer(child.gameObject, layerName);
+        var piano = Instantiate(_pianoPrefab, position, projectedRotation);
+        _spawnedPianos.Add(piano);
     }
 }
