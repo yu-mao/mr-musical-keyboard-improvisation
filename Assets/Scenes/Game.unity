@@ -8028,7 +8028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _handCollider: {fileID: 1308419204}
-  _pianoPrefab: {fileID: 3409707558030742345, guid: 8e89c811a058242f98332f5019007212, type: 3}
+  _pianoPrefab: {fileID: 3980617535266053094, guid: f6d60c488ef1c4303bbff82b4f81daf6, type: 3}
 --- !u!4 &1356869822
 Transform:
   m_ObjectHideFlags: 0
