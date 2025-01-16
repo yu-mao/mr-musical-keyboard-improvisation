@@ -1518,7 +1518,7 @@ MonoBehaviour:
   SpawnAmount: 1
   MaxIterations: 1000
   SpawnLocations: 3
-  Labels: 16
+  Labels: 8
   CheckOverlaps: 1
   OverrideBounds: -1
   LayerMask:
@@ -3627,15 +3627,15 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579998871}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.64188045, z: -0, w: 0.76680475}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0398}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 69830841}
   - {fileID: 1775085366}
   m_Father: {fileID: 387114003}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -79.864, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3662,7 +3662,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &579998874
 MonoBehaviour:
@@ -10313,7 +10313,7 @@ GameObject:
   - component: {fileID: 1775085368}
   - component: {fileID: 1775085367}
   m_Layer: 0
-  m_Name: Button
+  m_Name: ButtonRecreateKeyboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10336,7 +10336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 51.7}
+  m_AnchoredPosition: {x: 0, y: 82}
   m_SizeDelta: {x: 110, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1775085367
@@ -10360,10 +10360,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 0.9858491, b: 0.9858491, a: 1}
     m_HighlightedColor: {r: 0.85985553, g: 1, b: 0.6745283, a: 1}
     m_PressedColor: {r: 0.7534517, g: 0.990566, b: 0.4438857, a: 1}
-    m_SelectedColor: {r: 0.7529412, g: 0.99215686, b: 0.44313726, a: 1}
+    m_SelectedColor: {r: 1, g: 0.9843137, b: 0.9843137, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -10382,7 +10382,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1775085368}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1356869821}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: RecreateKeyboard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1775085368
 MonoBehaviour:
   m_ObjectHideFlags: 0
